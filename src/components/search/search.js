@@ -1,4 +1,5 @@
 import React from "react";
+import SearchList from "../map/searchList";
 
 export default function Search({ value, onChange, popup, setPopup }) {
   return (
@@ -9,9 +10,7 @@ export default function Search({ value, onChange, popup, setPopup }) {
         }}
         className="form"
       >
-        <div
-          className={popup ? "input-container not-def" : "input-container def"}
-        >
+        <div className="input-container def">
           <div style={{ width: "20px", height: "20px", marginRight: "5px" }}>
             <svg
               focusable="false"
@@ -36,6 +35,7 @@ export default function Search({ value, onChange, popup, setPopup }) {
             />
           </div>
         </div>
+        {popup && <SearchList />}
       </form>
     </>
   );
