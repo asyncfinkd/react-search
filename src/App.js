@@ -10,6 +10,9 @@ export default function App() {
         value={input}
         popup={showPopup}
         onChange={(e) => setInput(e.target.value)}
+        setPopup={() => {
+          setShowPopup(true);
+        }}
       />
     </>
   );

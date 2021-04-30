@@ -4,11 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .form {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.child-input-container {
+  width: 88%;
+  max-width: 100%;
 }
 
 .form .input-container {
@@ -25,10 +35,13 @@
   outline: none;
   flex: 1;
   border: none;
+  width: 100%;
 }
 
 .form .input-container .input.h-full {
-  height: 44px;
+  height: 40px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .form .input-container .input.h-min {
@@ -39,6 +52,10 @@
 
 .form .input-container.def {
   border-radius: 24px;
+}
+
+.form .input-container.not-def {
+  border-radius: 24px 24px 0px 0px;
 }
 
 .form .input-container .input::placeholder {
