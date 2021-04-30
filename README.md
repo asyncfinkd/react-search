@@ -7,8 +7,21 @@
   <li>We usually use CSS. No frameworks and support packages</li>
   <li>Fast loading and fast action</li>
 </ul>
-
-<!-- <img src="./content/Screenshot from 2021-04-30 23-16-11.png"> -->
+<br/>
+<p align="center">
+Input without result, searched<br/><br/>
+<img src="./content/1.png">
+</p>
+<br/>
+<p align="center">
+Input with list<br/><br/>
+<img src="./content/2.png">
+</p>
+<br/>
+<p align="center">
+Input With Searched<br/><br/>
+<img src="./content/Screenshot from 2021-04-30 23-19-16.png">
+</p>
 
 <p>The example below ensures that all items in JSON are retrieved and sorted by search. You will notice a strange removeItem pointer performing a deletion of an item in JSON. Depending on which one the user chooses to search. react-search is not a framework nor a package it is a simple code that helps you not to rewrite the same code several times in different projects</p>
 
