@@ -48,6 +48,6 @@
           <button className="close-btn" onClick={removeItem}>
             ×
           </button>
-        </div>
+     </div>
  </div>
 ```
