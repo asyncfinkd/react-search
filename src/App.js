@@ -13,6 +13,9 @@ export default function App() {
         setPopup={() => {
           setShowPopup(true);
         }}
+        closePopup={() => {
+          setShowPopup(!showPopup);
+        }}
       />
     </>
   );

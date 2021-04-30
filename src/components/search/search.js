@@ -1,9 +1,26 @@
 import React from "react";
 import SearchList from "../map/searchList";
 
-export default function Search({ value, onChange, popup, setPopup }) {
+export default function Search({
+  value,
+  onChange,
+  popup,
+  setPopup,
+  closePopup,
+}) {
   return (
     <>
+      <div
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          width: "100%",
+          height: "100vh",
+          zIndex: "-1",
+        }}
+        onClick={closePopup}
+      ></div>
       <form
         onSubmit={(e) => {
           e.preventDefault();

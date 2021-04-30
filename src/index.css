@@ -15,6 +15,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
+  z-index: 10;
 }
 
 .child-input-container {

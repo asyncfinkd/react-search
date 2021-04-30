@@ -14,11 +14,7 @@ export default function SearchList({ input }) {
         <div className="container-searchList">
           {renderData
             .filter((val) => {
-              if (input == "") {
-                return val;
-              } else if (
-                val.title.toLowerCase().includes(input.toLowerCase())
-              ) {
+              if (val.title.toLowerCase().includes(input.toLowerCase())) {
                 return val;
               }
             })
