@@ -8,8 +8,6 @@
   <li>Fast loading and fast action</li>
 </ul>
 
-<img src="/content/video-1619809579.mp4">
-
 <p>The example below ensures that all items in JSON are retrieved and sorted by search. You will notice a strange removeItem pointer performing a deletion of an item in JSON. Depending on which one the user chooses to search. react-search is not a framework nor a package it is a simple code that helps you not to rewrite the same code several times in different projects</p>
 
 ````jsx
