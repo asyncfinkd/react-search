@@ -6,6 +6,7 @@
   <li>Updates happen frequently. There is constant news</li>
   <li>Easy to use. Files are sorted for more information <b>content/filestructure.yml</b></li>
   <li>We usually use CSS. No frameworks and support packages</li>
+  <li>Fast loading and fast action</li>
 </ul>
 
 # Examples
