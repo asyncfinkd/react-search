@@ -1,5 +1,3 @@
-<p>This package will help you create a pretty good and beautiful search. And other related features</p>
-
 # Why i using react-search?
 
 <ul>
@@ -10,11 +8,9 @@
   <li>Fast loading and fast action</li>
 </ul>
 
-# Examples
-
 <p>The example below ensures that all items in JSON are retrieved and sorted by search. You will notice a strange removeItem pointer performing a deletion of an item in JSON. Depending on which one the user chooses to search. react-search is not a framework nor a package it is a simple code that helps you not to rewrite the same code several times in different projects</p>
 
-```jsx
+````jsx
 {
   renderData.length > 0 && (
     <div className="container-searchList">
@@ -35,9 +31,34 @@
     </div>
   );
 }
+
+<p>The example below ensures that all items in JSON are retrieved and sorted by search. You will notice a strange removeItem pointer performing a deletion of an item in JSON. Depending on which one the user chooses to search. react-search is not a framework nor a package it is a simple code that helps you not to rewrite the same code several times in different projects</p>
+
+```jsx
+      {renderData.length > 0 && (
+        <div className="container-searchList">
+          {renderData
+            .filter((val) => {
+              if (val.title.toLowerCase().includes(input.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((item) => {
+              const { id } = item;
+              return (
+                <>
+                  <SearchChildList
+                    {...item}
+                    removeItem={() => removeItem(id)}
+                  />
+                </>
+              );
+            })}
+        </div>
+      )}
 ```
 
-<p>In the example below we will process a popup and we will indicate that it will process the photo, name, and ID. Hopefully the code is very easy to write and easy to modify and is built entirely on the 2 useState method. Which handles the entire code./p>
+<p>In the example below we will process a popup and we will indicate that it will process the photo, name, and ID. Hopefully the code is very easy to write and easy to modify and is built entirely on the 2 useState method. Which handles the entire code.</p>
 
 ```jsx
 <div className="content-searchList" key={id}>
@@ -52,3 +73,4 @@
   </div>
 </div>
 ```
+````
