@@ -5,4 +5,5 @@
 - file: components
   file_child: data/data.js
   file_child: map/searchList.js
+  file_child: map/searchChildList.js
   file_child: search/search.js
