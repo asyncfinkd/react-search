@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "../data/data";
+import SearchChildList from "./SearchChildList";
 
-export default function SearchList() {
+export default function SearchList({ input }) {
+  const [renderData, setRenderData] = useState(data);
+  const removeItem = (id) => {
+    const newItem = renderData.filter((data2) => data2.id !== id);
+    setRenderData(newItem);
+  };
   return (
     <>
-      <div className="container-searchList">
-        {data.map((item) => {
-          const { id, title, image } = item;
-          return (
-            <>
-              <div className="content-searchList" key={id}>
-                <div className="flex">
-                  <img
-                    src={image}
-                    alt={title}
-                    className="content-image-searchList"
+      {renderData.length > 0 && (
+        <div className="container-searchList">
+          {renderData
+            .filter((val) => {
+              if (input == "") {
+                return val;
+              } else if (
+                val.title.toLowerCase().includes(input.toLowerCase())
+              ) {
+                return val;
+              }
+            })
+            .map((item) => {
+              const { id, title, image } = item;
+              return (
+                <>
+                  <SearchChildList
+                    {...item}
+                    removeItem={() => removeItem(id)}
                   />
-                  <p className="mleft">{title}</p>
-                </div>
-                <div>
-                  <button className="close-btn">×</button>
-                </div>
-              </div>
-            </>
-          );
-        })}
-      </div>
+                </>
+              );
+            })}
+        </div>
+      )}
     </>
   );
 }

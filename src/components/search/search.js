@@ -35,7 +35,7 @@ export default function Search({ value, onChange, popup, setPopup }) {
             />
           </div>
         </div>
-        {popup && <SearchList />}
+        {popup && <SearchList input={value} />}
       </form>
     </>
   );
