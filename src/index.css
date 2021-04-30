@@ -3,3 +3,54 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.form .input-container {
+  width: 350px;
+  max-width: 100%;
+  border: 1px solid #dfe1e5;
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.form .input-container .input {
+  color: rgba(0, 0, 0, 0.87);
+  outline: none;
+  flex: 1;
+  border: none;
+}
+
+.form .input-container .input.h-full {
+  height: 44px;
+}
+
+.form .input-container .input.h-min {
+  height: 27px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.form .input-container.def {
+  border-radius: 24px;
+}
+
+.form .input-container .input::placeholder {
+  text-transform: capitalize;
+}
+
+.input-container:focus-within {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.form .input-container:hover {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}

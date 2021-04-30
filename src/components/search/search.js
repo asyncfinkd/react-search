@@ -1,10 +1,36 @@
 import React from "react";
 
-export default function Search({ value, onChange }) {
+export default function Search({ value, onChange, popup }) {
   return (
     <>
-      <form>
-        <input type="text" value={value} onChange={onChange} />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className="form"
+      >
+        <div
+          className={popup ? "input-container not-def" : "input-container def"}
+        >
+          <div style={{ width: "20px", height: "20px", marginRight: "5px" }}>
+            <svg
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              style={{ fill: "#9aa0a6", paddingLeft: "5px" }}
+            >
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+          </div>
+          <div>
+            <input
+              type="text"
+              className={popup ? "input full" : "input h-min"}
+              value={value}
+              onChange={onChange}
+            />
+          </div>
+        </div>
       </form>
     </>
   );
