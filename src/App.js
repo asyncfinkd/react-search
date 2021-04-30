@@ -14,7 +14,7 @@ export default function App() {
           setShowPopup(true);
         }}
         closePopup={() => {
-          setShowPopup(!showPopup);
+          setShowPopup(false);
         }}
       />
     </>
