@@ -19,7 +19,7 @@ export default function SearchList({ input }) {
               }
             })
             .map((item) => {
-              const { id, title, image } = item;
+              const { id } = item;
               return (
                 <>
                   <SearchChildList
