@@ -64,11 +64,33 @@ body {
 .container-searchList {
   background-color: white;
   width: 350px;
+  overflow-y: scroll;
+  height: 300px;
   margin-top: 10px;
   border: 1px solid #dfe1e5;
   max-width: 100%;
   border-radius: 4px;
   padding: 15px;
+}
+
+#modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+#modal::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+#modal::-webkit-scrollbar-thumb {
+  background: #3e4042b6;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(62, 69, 69, 0.775);
 }
 
 .content-image-searchList {

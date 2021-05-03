@@ -11,7 +11,7 @@ export default function SearchList({ input }) {
   return (
     <>
       {renderData.length > 0 && (
-        <div className="container-searchList">
+        <div className="container-searchList" id="modal">
           {renderData
             .filter((val) => {
               if (val.title.toLowerCase().includes(input.toLowerCase())) {
